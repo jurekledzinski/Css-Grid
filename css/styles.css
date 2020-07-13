@@ -20,8 +20,6 @@ body {
   .grid {
     -ms-grid-columns: minmax(300px, auto) 1fr;
         grid-template-columns: minmax(300px, auto) 1fr;
-    -ms-grid-rows: auto 1fr auto auto;
-        grid-template-rows: auto 1fr auto auto;
     -ms-grid-rows: auto auto auto 1fr auto auto;
         grid-template-rows: auto auto auto 1fr auto auto;
         grid-template-areas: 'logo gallery' 'menu gallery' 'search gallery' '. gallery' 'contact gallery' 'footer footer';
