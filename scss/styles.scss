@@ -14,6 +14,20 @@ body {
         'footer footer footer'
     ;
 
+    @media (min-width: 1024px) {
+        grid-template-columns: minmax(300px, auto) 1fr;
+        grid-template-rows: auto 1fr auto auto;
+        grid-template-rows: auto auto auto 1fr auto auto;
+        grid-template-areas:
+            'logo gallery'
+            'menu gallery'
+            'search gallery'
+            '. gallery'
+            'contact gallery'
+            'footer footer'
+        ;
+    }
+
     //kontener
     min-height: 100vh;
     max-width: 1240px;
@@ -21,29 +35,45 @@ body {
 }
 
 .logo {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
+    // grid-column-start: 1;
+    // grid-column-end: 2;
+    // grid-row-start: 1;
+    // grid-row-end: 2;
+    grid-area: logo;
     background-color: red;
     height: 100px;
+
+    // @media(min-width: 1024px) {
+    //     grid-area: logo;
+    // }
 }
 
 .search {
     grid-column: 2/3;
     grid-row: 1/2;
     background-color: cadetblue;
+
+    @media(min-width: 1024px) {
+        grid-area: search;
+        min-height: 80px;
+    }
 }
 
 .menu {
     grid-column: -1/-2;
     grid-row: 1;
     background-color: yellow;
+
+    @media(min-width: 1024px) {
+        grid-area: menu;
+        min-height: 300px;
+    }
 }
 
 .gallery {
-    grid-column: 1/-1;
-    grid-row: 2;
+    // grid-column: 1/-1;
+    // grid-row: 2;
+    grid-area: gallery;
     background-color: lightgreen;
 
     //kontener
@@ -68,12 +98,17 @@ body {
 }
 
 .contact {
+    // grid-area: 3/1/4/-1;
+    grid-area: contact;
     height: 60px;
-    grid-area: 3/1/4/-1;
     background-color: coral;
 }
 
 .footer {
     grid-area: footer;
     background-color: violet;
+
+    @media(min-width: 1024px) {
+        min-height: 50px;
+    }
 }
