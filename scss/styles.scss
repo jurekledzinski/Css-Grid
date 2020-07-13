@@ -5,4 +5,55 @@ body {
 
 .grid {
     display: grid;
+    grid-template-columns: minmax(120px, 200px) minmax(200px, 1fr) 80px;
+    grid-template-rows: auto 1fr auto auto;
+    grid-template-areas:
+        'logo search menu'
+        'gallery gallery gallery'
+        'contact contact contact'
+        'footer footer footer'
+    ;
+
+    //kontener
+    min-height: 100vh;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.logo {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-color: red;
+    height: 100px;
+}
+
+.search {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background-color: cadetblue;
+}
+
+.menu {
+    grid-column: -1/-2;
+    grid-row: 1;
+    background-color: yellow;
+}
+
+.gallery {
+    grid-column: 1/-1;
+    grid-row: 2;
+    background-color: lightgreen;
+}
+
+.contact {
+    height: 60px;
+    grid-area: 3/1/4/-1;
+    background-color: coral;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: violet;
 }
