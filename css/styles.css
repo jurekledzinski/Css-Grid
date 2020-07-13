@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+  font-family: arial, sans-serif;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+}
+
+/*# sourceMappingURL=styles.css.map */
