@@ -45,6 +45,26 @@ body {
     grid-column: 1/-1;
     grid-row: 2;
     background-color: lightgreen;
+
+    //kontener
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(205px, 1fr));
+    gap: 15px;
+    padding: 120px 15px 15px 15px;
+    position: relative;
+
+    &__title {
+        position: absolute;
+        top: 30px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.39);
+    }
+
+    &__image {
+        width: 100%;
+    }
 }
 
 .contact {
